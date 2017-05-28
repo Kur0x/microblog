@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 
 git_source(:github) do |repo_name|
-  repo_name = "#{repo_name}/#{repo_name}" unless repo_name.include?("/")
+  repo_name = "#{repo_name}/#{repo_name}" unless repo_name.include?('/')
   "https://github.com/#{repo_name}.git"
 end
 
@@ -9,7 +9,9 @@ end
 gem 'bcrypt'
 gem 'bootstrap-sass'
 gem 'jquery-rails'
-
+gem 'faker'
+gem 'will_paginate'
+gem 'bootstrap-will_paginate'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.1.0'
 # Use sqlite3 as the database for Active Record
@@ -60,8 +62,6 @@ group :test do
   gem 'guard-minitest'
   gem 'minitest-reporters'
 end
-
-
 
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem

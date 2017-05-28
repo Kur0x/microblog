@@ -104,11 +104,20 @@
       <Position>5</Position>
       <DataType>varchar|0</DataType>
     </column>
-    <index id="30" parent="7" name="index_users_on_email">
+    <column id="30" parent="7" name="remember_digest">
+      <Position>6</Position>
+      <DataType>varchar|0</DataType>
+    </column>
+    <column id="31" parent="7" name="admin">
+      <Position>7</Position>
+      <DataType>boolean|0</DataType>
+      <DefaultExpression>&apos;f&apos;</DefaultExpression>
+    </column>
+    <index id="32" parent="7" name="index_users_on_email">
       <ColNames>email</ColNames>
       <Unique>1</Unique>
     </index>
-    <key id="31" parent="7">
+    <key id="33" parent="7">
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
