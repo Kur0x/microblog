@@ -19,5 +19,23 @@
 
 /node_modules
 /yarn-error.log
-
+/public/uploads
 .byebug_history
+将删除 .idea/dataSources.local.xml
+将删除 .idea/dataSources/6f0c65db-5286-4f1e-9dbd-b7c7964f1294/_src_/
+将删除 .idea/dataSources/6f0c65db-5286-4f1e-9dbd-b7c7964f1294/_staging_/
+将删除 .idea/workspace.xml
+将删除 app/assets/javascripts/microposts.coffee
+将删除 app/assets/stylesheets/microposts.scss
+将删除 app/controllers/microposts_controller.rb
+将删除 app/helpers/microposts_helper.rb
+将删除 app/models/micropost.rb
+将删除 app/uploaders/
+将删除 app/views/account_activations/
+将删除 db/migrate/20170528055328_create_microposts.rb
+将删除 db/migrate/20170528112237_add_picture_to_microposts.rb
+将删除 test/controllers/microposts_controller_test.rb
+将删除 test/fixtures/microposts.yml
+将删除 test/integration/microposts_interface_test.rb
+将删除 test/models/micropost_test.rb
+将删除 tmp/
