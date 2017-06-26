@@ -1,6 +1,5 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
-
 @mixin box_sizing {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
@@ -289,4 +288,9 @@ span.picture {
   input {
     border: 0;
   }
+}
+
+#trans {
+  background: #fff;
+  border: 0 none;
 }

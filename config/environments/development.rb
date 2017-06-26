@@ -52,7 +52,31 @@ Rails.application.configure do
   # routes, locales, etc. This feature depends on the listen gem.
   config.file_watcher = ActiveSupport::EventedFileUpdateChecker
 
-  config.action_mailer.delivery_method = :test
-  host = 'localhost:3000'
-  config.action_mailer.default_url_options = { host: host, protocol: 'http' }
+  # config.action_mailer.delivery_method = :test
+  # host = 'localhost:3000'
+  host = 'microblog.kuro-x.com'
+  # config.action_mailer.default_url_options = { host: host, protocol: 'https' }
+  config.active_record.dump_schema_after_migration = false
+
+  config.action_mailer.raise_delivery_errors = true
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.default_url_options = { host: host }
+  ActionMailer::Base.smtp_settings = {
+      address: 'smtp.126.com',
+      port: '25',
+      authentication: :login,
+      user_name: 'dqh915ls',
+      password: '19960915',
+      domain: '126.com',
+      # enable_starttls_auto: true
+  }
+  #   ActionMailer::Base.smtp_settings = {
+  #     address: 'smtp.mxhichina.com',
+  #     port: '465',
+  #     authentication: :login,
+  #     user_name: 'info@kuro-x.com',
+  #     password: 'Kurokill',
+  #     domain: 'kuro-x.com',
+  #     enable_starttls_auto: true
+  # }
 end
