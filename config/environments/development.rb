@@ -18,7 +18,7 @@ Rails.application.configure do
 
     config.cache_store = :memory_store
     config.public_file_server.headers = {
-      'Cache-Control' => "public, max-age=#{2.days.seconds.to_i}"
+        'Cache-Control' => 'public, max-age=172800'
     }
   else
     config.action_controller.perform_caching = false
@@ -26,9 +26,10 @@ Rails.application.configure do
     config.cache_store = :null_store
   end
 
-  # Don't care if the mailer can't send.
   config.action_mailer.raise_delivery_errors = true
-
+  config.action_mailer.delivery_method = :test
+  host = 'rails-tutorial-mhartl.c9users.io'
+  config.action_mailer.default_url_options = {host: host, protocol: 'http'}
   config.action_mailer.perform_caching = false
 
   # Print deprecation notices to the Rails logger.
@@ -42,41 +43,10 @@ Rails.application.configure do
   # number of complex assets.
   config.assets.debug = true
 
-  # Suppress logger output for asset requests.
-  config.assets.quiet = true
-
   # Raises error for missing translations
   # config.action_view.raise_on_missing_translations = true
 
   # Use an evented file watcher to asynchronously detect changes in source code,
   # routes, locales, etc. This feature depends on the listen gem.
   config.file_watcher = ActiveSupport::EventedFileUpdateChecker
-
-  # config.action_mailer.delivery_method = :test
-  # host = 'localhost:3000'
-  host = 'microblog.kuro-x.com'
-  # config.action_mailer.default_url_options = { host: host, protocol: 'https' }
-  config.active_record.dump_schema_after_migration = false
-
-  config.action_mailer.raise_delivery_errors = true
-  config.action_mailer.delivery_method = :smtp
-  config.action_mailer.default_url_options = { host: host }
-  ActionMailer::Base.smtp_settings = {
-      address: 'smtp.126.com',
-      port: '25',
-      authentication: :login,
-      user_name: 'dqh915ls',
-      password: '19960915',
-      domain: '126.com',
-      # enable_starttls_auto: true
-  }
-  #   ActionMailer::Base.smtp_settings = {
-  #     address: 'smtp.mxhichina.com',
-  #     port: '465',
-  #     authentication: :login,
-  #     user_name: 'info@kuro-x.com',
-  #     password: 'Kurokill',
-  #     domain: 'kuro-x.com',
-  #     enable_starttls_auto: true
-  # }
 end

@@ -91,15 +91,16 @@ Rails.application.configure do
 
   config.action_mailer.raise_delivery_errors = true
   config.action_mailer.delivery_method = :smtp
-  host = 'kuro-x.com'
+  host = 'microblog.kuro-x.com'
   config.action_mailer.default_url_options = { host: host }
+
   ActionMailer::Base.smtp_settings = {
-      address: 'smtp.kuro-x.com',
+      address: 'smtp.126.com',
       port: '25',
-      authentication: :plain,
-      user_name: ENV['SENDGRID_USERNAME'],
+      authentication: :login,
+      user_name: ENV['SENDGRID_USERNAME'], # without @...
       password: ENV['SENDGRID_PASSWORD'],
-      domain: 'kuro-x.com',
-      enable_starttls_auto: true
+      domain: '126.com',
+      # enable_starttls_auto: true
   }
 end

@@ -11,7 +11,7 @@ All source code  is available jointly under the MIT License and the Beerware Lic
 To get started with the app, clone the repo and then install the needed gems:
 
 ```
-$ cd ~/tmp
+$ cd ~/
 $ git clone https://github.com/Kur0x/microblog.git microblog
 $ cd microblog
 $ bundle install --without production
@@ -46,5 +46,12 @@ $ rails server
 
     You can run `sudo apt-get install libsqlite3-dev`
 
+3. $ rails db:migrate
+   rails aborted!
+   Bundler::GemRequireError: There was an error while trying to load the gem 'uglifier'.
+   Gem Load Error is: Could not find a JavaScript runtime. See https://github.com/rails/execjs for a list of available runtimes.
+
+    You can run `sudo apt-get install nodejs`
+    
 For more information, see the
 [*Ruby on Rails Tutorial* book](http://www.railstutorial.org/book).
