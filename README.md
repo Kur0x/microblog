@@ -34,7 +34,7 @@ If the test suite passes, you'll be ready to run the app in a local server:
 ```
 $ rails server
 ```
-##TrobleShooting
+## TrobleShooting
 1. An error occurred while installing mysql2 (0.4.6), and Bundler cannot continue.
    Make sure that `gem install mysql2 -v '0.4.6'` succeeds before bundling.
 
