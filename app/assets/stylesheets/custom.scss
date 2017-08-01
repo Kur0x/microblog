@@ -269,6 +269,14 @@ input {
     display: block;
     margin-left: 60px;
   }
+  .post-foot {
+    color: $gray-light;
+    display: block;
+    margin-left: 60px;
+  }
+  .fa-heart {
+    color: #ff1e1e;
+  }
   .gravatar {
     float: left;
     margin-right: 10px;
@@ -290,7 +298,11 @@ span.picture {
   }
 }
 
-#trans {
+.ico {
   background: #fff;
   border: 0 none;
+}
+
+.post-footer {
+  display: inline-block;
 }

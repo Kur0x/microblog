@@ -98,5 +98,14 @@ foo@bar_baz.com foo@bar+baz.com]
       assert_not michael.feed.include?(post_unfollowed)
     end
   end
-
+  test "should like and unlike a post" do
+    michael = users(:michael)
+    post = users(:michael).microposts.first
+    assert_not michael.like?(post)
+    michael.like(post)
+    assert michael.like?(post)
+    assert post.liked_users.include?(michael)
+    michael.unlike(post)
+    assert_not michael.like?(post)
+  end
 end

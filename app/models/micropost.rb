@@ -6,6 +6,12 @@ class Micropost < ApplicationRecord
   validates :content, presence: true, length: { maximum: 140 }
   validate :picture_size
 
+  has_many :likeds,
+           class_name: 'Like',
+           foreign_key: 'liked_post_id',
+           dependent: :destroy
+  has_many :liked_users, through: :likeds
+
   private
 
   # 验证上传的图像大小

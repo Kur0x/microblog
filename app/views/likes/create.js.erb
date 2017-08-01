@@ -1,0 +1,2 @@
+$("#like_form-<%= @post.id %>").html("<%= escape_javascript(render('microposts/unlike', micropost: @post)) %>");
+$("#liked-<%= @post.id %>").html('<%= @post.liked_users.count %>');

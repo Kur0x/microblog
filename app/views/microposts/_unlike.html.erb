@@ -1,0 +1,5 @@
+<%= form_for(current_user.likes.find_by(liked_post_id: micropost.id),
+             html: {method: :delete}, remote: true) do |f| %>
+    <!--<%= f.submit 'Unlike', class: 'btn' %>-->
+    <button value="Submit" id="like" class="ico"><%= fa_icon 'heart' %></button>
+<% end %>

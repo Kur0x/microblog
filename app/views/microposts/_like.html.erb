@@ -1,0 +1,5 @@
+<%= form_for(current_user.likes.build, remote: true) do |f| %>
+    <div><%= hidden_field_tag :liked_post_id, micropost.id %></div>
+    <!--<%= f.submit 'Like', class: 'btn btn-primary' %>-->
+    <button value="Submit" id="like" class="ico"><%= fa_icon 'heart-o' %></button>
+<% end %>
